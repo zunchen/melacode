@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<configuration>
+    <property>
+        <name>dfs.permissions</name>
+        <value>false</value>
+    </property>
+
+
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://master:3306/hive?createDatabaseIFnotExist=true&amp;useUnicode=true&amp;characterEncoding=latin1</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>hadoop</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>hadoop</value>
+    </property>
+
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://master:9083</value>
+    </property>
+    <property>
+        <name>hive.metastore.execute.setugi</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>hive.server2.enable.doAs</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>hive.server2.thrift.port</name>
+        <value>10000</value>
+    </property>
+    <property>
+        <name>hive.server2.long.polling.timeout</name>
+        <value>50000</value>
+    </property>
+    <property>
+        <name>hive.users.in.admin.role</name>
+        <value>hadoop</value>
+    </property>
+    <property>
+        <name>hive.secutrity.authorization.enabled</name>
+        <value>false</value>
+    </property>
+    <property>
+        <name>hive.security.authorization.createtable.owner.grants</name>
+        <value>ALL</value>
+    </property>
+    <property>
+        <name>hive.security.authorization.task.factory</name>
+        <value>org.apache.hadoop.hive.ql.parse.authorization.HiveAuthorizationTaskFactoryImpl</value>
+    </property>
+    <!--<property>
+        <name>hive.semantic.analyzer.hook</name>
+        <value>com.sky.hive.auth.AuthHook</value>
+    </property>-->
+    <!--<property>
+        <name>hive.security.authenticator.manager</name>
+        <value>com.sky.hive.auth.Authenticator</value>
+    </property>-->
+</configuration>
